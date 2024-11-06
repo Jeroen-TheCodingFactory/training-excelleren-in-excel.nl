@@ -25,7 +25,7 @@ body{
 
 
 
-main{
+.cards{
     display:grid;
     grid-template-columns: repeat(auto-fill,200px);
     grid-auto-rows: 200px;
@@ -110,6 +110,46 @@ footer{
     font-size:60%;
 }
 
+.body--page{
+    display:grid; 
+    grid-template-columns: 25% 50% 25%;
+    grid-template-areas: 
+    ". main .";
+    color:black;
+}
+
+.page{
+    grid-area: main;
+    background:hsl(0, 0%, 95%);
+    color:black;
+    padding:40px;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.breadcrumb{
+    text-decoration: underline;
+    color: blue !important;
+}
+
+ul{
+    list-style-position: inside;
+}
+
+.list{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.opdracht{
+    background:hsl(0, 0%, 80%);
+    padding:10px;
+    border:1px dashed black;
+
+}
+
 @keyframes popup {
     from{
         opacity:0;
@@ -118,4 +158,11 @@ footer{
     to{
         opacity:1;
     }
+}
+
+@media screen and (max-width:1000px) {
+    .body--page{
+        grid-template-columns: 10% 80% 10%;
+    }
+    
 }
