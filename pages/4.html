@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="body--page">
+    <header class="mainHeader">
+        <figure class="logo"><img src="/img/SBB Logo_WEB_beeldmerk.png" alt="Web logo SBB"></figure>
+    </header>
+    <main class="page">
+        <a href="/" class="breadcrumb">Terug naar Home</a>
+        <h1>4. Gegevens Filteren, Sorteren, Verbergen </h1>
+        <p>Laten we met een tweede real-life casus beginnen. Download <a href="" class="breadcrumb">hier</a> een Excel die je gaat gebruiken voor de sectie.</p>
+        
+        <h2>Tabblad Kopiëren</h2>
+        <p>Laten we eerst dit blad in ons eigen Excel bestand inladen.</p>
+        <ol class="list">
+            <li>Zorg dat je jouw eigen Excel (kennissessie Excel) open hebt staan.</li>
+            <li>Klik met de rechtermuisknop op de naam van het tabblad. Kies vervolgens <code>Verplaatsen of Kopieëren.</code></li>
+            <li>Klik bij <code>Naar map:</code>op jouw eigen Excel.</li>
+            <li>Klik op <code>OK</code>.</li>
+        </ol>
+        <p>Als alles goed is gegaan zit het tabblad nu in jouw eigen Excel bestand!</p>
+        <h2>Berekening maken</h2>
+        <p>Zoals je ziet heeft elke student een studentnummer, drie cijfers en een aanwezigheidspercentage. De regels voor het eindcijfer zijn als volgt:</p>
+        <em>Een student zijn eindcijfer wordt berekend aan de hand van zijn deelcijfers. Het eerste cijfer (cijfer 1) telt voor 20% mee, het tweede cijfer (cijfer 2) voor 30% en het derde cijfer (cijfer 3) voor 50%.</em>
+        <p>We kunnen deze berekening maken door:</p>
+        <em>Eindcijfer = cijfer1 x 0.2 + cijfer2 x 0.3 + cijfer3 * 0.5</em>
+        <ol class="list">
+            <li>Klik op E4.</li>
+            <li>Vul hier <code>=</code> in, we gaan een eigen berekening maken!</li>
+            <li>Vul hierna B3 * 0.2 in. Nu staat er dus <code>=B4 * 0.2</code>. Druk op <code>ENTER</code></li>
+            <li>Als het goed is krijg je nu een uitslag in E4. We hoeven nu alleen maar de rest van de deelcijfers ook te berekenen: voeg <code>+ C4 * 0,3</code> en <code>+ D4 * 0,5 </code> toe. Het totaal wordt: <code>=B4 * 0,2 + C4 * 0,3 + D4 * 0,5</code>.</li>
+        </ol>
+        <p>Awww yeah! De formule werkt nu voor de bovenste student. Maar niet voor allemaal. Je kan nu elke cel handmatig de formule aanpassen of je doet het efficiënt:</p>
+        <ol class="list">
+            <li>Klik op E4.</li>
+            <li>Sleep het vierkantje rechtsonderin naar de andere cellen waar je de berekening ook wilt gebruiken.</li>
+        </ol>
+        <p>De formule wordt nu automatisch aangepast naar waarde van de betreffende rij. Dit kan je checken door bijv. op E5 te klikken. Je ziet dat deze nu andere waarden gebruikt. </p>
+        <h2>Verbergen</h2>
+        <p>Nu we de eindcijfers hebben, hebben we de deelcijfers niet meer nodig. We kunnen ze alleen <strong>niet</strong> verwijderen, aangezien onze Excel dan kapot gaat. We kunnen ze wel verbergen.</p>
+        <ol class="list">
+            <li>Klik op Kolom B.</li>
+            <li>Houd <code>CTRL</code> ingedrukt en klik op kolom C en daarna op kolom D.</li>
+            <li>Rechtsklik en selecteer <code>Verbergen</code>.</li>
+        </ol>
+        <p>De data blijft behouden en onze Excel blijft overzichtelijk.</p>
+        <h2>Sorteren</h2>
+        <p>Onze data is niet perse overzichtelijk als volgordelijkheid in onze data willen. Laten we onze data sorteren:</p>
+        <ol class="list">
+            <li>Selecteer A4:F23.</li>
+            <li>Rechtsklik en open Sorteren. Klik op <code>Aangepast sorteren.</code></li>
+            <li>We kunnen nu sorteren en zelfs eerst sorteren op bijvoorbeeld Eindcijfer en daarna op aanwezigheid.</li>
+            <li>Klik op <code>v</code> en sorteer op Eindcijfer. Klik hierna op <code>Niveau toevoegen</code>.</li>
+            <li>Sorteer hierna op Aanwezigheid. Klik bij volgorde op <code>Van groot naar klein</code>.</li>
+        </ol>
+        <p>Onze data is nu een stuk overzichtelijker!</p>
+        <h2>Filteren</h2>
+        <p>Als je alleen cijfers van een bepaalde student wilt (zeker wanneer je bestand enorm groot is) kan je data ook filteren.</p>
+        <ol class="list">
+            <li>Selecteer A4:A23.</li>
+            <li>Rechtsklik op <code>Filteren</code> en klik hierna op <code>Waarde van geselecteerde cel gebruiken voor filter.</code></li>
+            <li>Je ziet nu dat de tabel ingeklapt is. Klik op het icoontje op A4 en klik hierna op <code>Alles selecteren</code>, hierna op <code>OK</code>.</li>
+        </ol>
+        <p>Je hebt nu een werkende filter waar je gemakkelijk per studentnummer kan filteren.</p>
+        <h2>Berekeningen</h2>
+        <p>Voor toetscijfers zijn vaak het gemiddelde (som van cijfers / aantal deelnemers) en het mediaan (het middelste cijfer als alle cijfers op volgorde staan) belangrijk. Het gemiddelde houdt rekening met uitschieters (bijv. een 1 of een 10), het mediaan niet. </p>
+        <ol class="list">
+            <li>Selecteer H4.</li>
+            <li>Vul in de tekstbalk <code>=GEMIDDELDE()</code> in.</li>
+            <li>Voeg tussen de <code>()</code> B4:B23 in. Druk op <code>ENTER</code></CODE></li>
+            <li>Sleep de formule van H4 via het vierkantje naar I4, J4 en K4. </li>
+        </ol>
+        <p>Als alles goed gaat heb je nu de gemiddelden van alle cijfers en het eindcijfer berekend.</p>
+        <section class="opdracht">
+        Opdracht: Maak de berekening voor het Mediaan per cijfer en eindcijfer. (H10,I10,J10,K10)
+    </section>
+        <a href="/pages/5.html" class="breadcrumb">4. Gegevens Filteren en Sorteren </a>
+</body>
+
+</html>
