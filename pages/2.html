@@ -1,21 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body class="body--page">
+    <header class="mainHeader">
+        <figure class="logo"><img src="/img/SBB Logo_WEB_beeldmerk.png" alt="Web logo SBB"></figure>
+    </header>
     <main class="page">
         <a href="/" class="breadcrumb">Terug naar Home</a>
         <h1>2. Een simpele lay-out maken</h1>
+        <p>We beginnen met het maken van een lay-out. We leren wat basis- kennis en vaardigheden om een Excel
+            overzichtelijk te maken en gaan hier in de volgende opdrachten mee verder. Onze eerst sheet wordt een kasboek, een leuke tool die je zelf ook kan gebruiken.</p>
+        <em>Wil je zelf dingen uitvinden i.p.v. een uitleg? Scroll dan helemaal naar onder en probeer de opdracht
+            zelf!</em>
 
+        <h2>Kolommen en rijen</h2>
+        <p>Een Excel-bestand bestaat uit verschillende tabladen. Deze tabladen worden in het Engels <em>sheets</em>
+            genoemd.</p>
+        <p>Een tabblad bestaat uit rijen - uitgedrukt in nummers - en kolommen - verticaal - uitgedrukt in letters. Een
+            enkele cel bestaat uit een stukje data (of is leeg) en is een combinatie van een rij en een kolom. C7 is
+            bijvoorbeeld kolom C en rij 7. D1:D19 betekent kolom D rij 1 tot en met rij 19. C17 is een enkele cel,
+            D1:D19 is een <em>bereik van cellen.</em> </p>
 
+        <h2>Cellen opmaken</h2>
+        <p>Om een sheet overzichtelijk te houden is het belangrijk een sheet op te maken:</p>
+        <ol class="list">
+            <li>Selecteer de kolom A door erop te klikken.</li>
+            <li>Houdt vervolgens <code>Ctrl</code> ingedrukt en klik op kolom B en Kolom C. </li>
+            <li>Rechtsklik op een van de kolommen en selecteer <code>Kolombreedte</code>, vul hier 20 in.</li>
+        </ol>
+        Als alles goed is gegaan heb je nu 3 cellen die allen 20 breed zijn.
+        
+        <h2>Samenvoegen</h2>
+        <p>Soms wil je een cel een duidelijk accent geven en ven breed maken als bijv. 3 andere cellen. Daar gaat dit stukje over!</p>
+        <ol class="list">
+            <li>Selecteer A1:C2. Dit doe je door te klikken op A1 en dan het selectieveld naar C26 te slepen</li>
+            <li>Klik vervolgens op <code>samenvoegen</code>. Dit stukje vind je onder Uitlijnen in het Excel start tabblad. </li>
+            <li>Als het goed is is A1:C2 nu één cel geworden. Geef de cel een andere kleur (grijs bijvoorbeeld).</li>
+            <li>Zet de tekst "Uitgaven November 2024" in de cel. Maakt de tekst <strong>dikgedrukt door op de b te drukken</strong>.</li>
+            <li>Zorg dat de tekst in het middel verticaal staat. Dit kan je doen in de buurt van de samenvoegen knop!</li>
+        </ol>
+
+        <h2>Tabelranden</h2>
+        <p>Om een cel van andere cellen af te scheiden bevat elke cel 4 lichtgrijze randen. Deze kan je gemakkelijk aanpassen om ze meer of minder onderscheidend te maken. </p>
+        <ol class="list">
+            <li>Selecteer A1:C26</li>
+            <li>Klik op <code>v</code> bij het tekentje van tabelranden (te vinden in de buurt waar je ook tekst <strong>dikgedrukt kan maken</strong>.</li>
+            <li>Kies de optie <code>Alle randen</code> zodat de tabel er duidelijk uitziet!</li>
+        </ol>
+
+        <h2>Datatypes</h2>
+       <p>Misschien wel een van de belangrijkste items in de Informatica; Datatypes! Datatypes definiëren wat voor soort data (en in welk format) data moet worden opgeslagen. Zo is 19-01-2024 (een datum) echt wat anders dan 19012024 (tekst) wanneer je werkt met software!</p>
+       <p>Heb je ooit weleens problemen gehad met bijv. een datum invullen? Kwam deze op een andere manier tevoorschijn dan dat je verwachtte? Waarschijnlijk het verkeerde datatype!</p>
+        <ol class="list">
+            <li>Selecteer A4:A24 en klik op <code>v</code> onder het "blok" <code>Getal</code>. Als het goed is kan je verschillende typen data kiezen. </li>
+            <li>Kies voor Tekst.</li>
+            <li>Selecteer B4:B24 en maak deze het datatype Valuta.</li>
+            <li>Selecteer C4:C24 en maak deze het datatype Korte datumnotatie</li>
+        </ol>
         <section class="opdracht">
-            Opdracht: Download <a class="breadcrumb" href="/data/sheet2.xlsx">hier</a> een voorbeeld van een lay-out. Maak de lay-out na in jouw eigen Excel!
+            Opdracht: Download <a class="breadcrumb" href="/data/opdracht-2-voorbeeld.xlsx">hier</a> een voorbeeld van een
+            lay-out. Maak deze lay-out na in jouw eigen Excel. Als je bovenstaande stappen hebt gevolgd heb je deze al voor een deel nagemaakt.
+            Vergeet ook niet de data over te nemen. 
         </section>
-        <a href="/pages/2.html" class="breadcrumb"></a>
     </main>
 </body>
+
 </html>
