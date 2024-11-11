@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="body--page">
+    <header class="mainHeader">
+        <figure class="logo"><img src="/img/SBB Logo_WEB_beeldmerk.png" alt="Web logo SBB"></figure>
+    </header>
+    <main class="page">
+        <a href="/" class="breadcrumb">Terug naar Home</a>
+        <h1>5. Speciale tabellen </h1>
+        <p>Vaak heb je gegevens van een tabblad nodig in een ander tabblad. Kopieert is een optie maar meestal niet de meest efficiënte oplossing. Wanneer je gegevens kopieërt worden ze automatisch veel vatbaarder voor fouten. En wat gebeurt er wanneer je de originele gegevens wijzigt? Om dit principe goed te kunnen aanduiden doen we een aantal voorbereidingen:</p>
+        <ol class="list">
+            <li>Maak in jouw eigen Excel een nieuw tabblad aan.</li>
+            <li>Noem deze "GEGEVENS".</li>
+            <li>Selecteer Kolom F in het "Cijfers Excel 101" tabblad.  </li>
+            <li>Doe een rechtermuisklik en klik op <em>Invoegen</em>. </li>
+        </ol>
+        <p>Als het goed is heb je nu een extra kolom die de stijl van de tabel die er al stond overneemt. </p>
+        <h2>Stamtabellen</h2>
+        <p>Een van de meest gebruikte "speciale" tabellen zijn stamtabbelen. Stamtabellen worden gebruikt om gegevens in op te slaan die vervolgens weer in andere tabellen of producten gebruikt kunnen worden. </p>
+        <p>Een stamtabel lijkt soms onnodig, maar is een hele handige optimalisatieslag. Je zorgt namelijk dat alle data op één plek staat. Ook kan je de sheet beveiligen zodat de data niet door iedereen kan worden aangepast.</p>
+        <ol class="list">
+            <li>Maak kolom A 20 breed.</li>
+            <li>Geef A1 een kleur naar keuze en vul hier <code>Docent</code> in.</li>
+            <li>Vul in A2 tot en met A8 willekeurige namen in. Je naaste collega's zijn altijd een goede keuze!</li>
+            <li>Vergeet niet tussentijds op te slaan. <code>CTRL + s</code> kan je hiervoor gebruiken.</li>
+            <li>Vul in het tabblad "Cijfers Excel 101" de cel F3 in met de data Docenten.</li>
+            <li>Selecteer F4:F23.</li>
+            <li>Klik op de zoekbalk van Excel en type hier <code>Gegevensvalidatie</code> in, klik vervolgens op de eerste optie.</li>
+            <li>Je krijgt een nieuw scherm. Onder Toestaan selecteren we de optie <code>Lijst</code>.</li>
+            <li>Klik vervolgens bij Bron op het <code>Pijltje dat omhoog wijst / ^</code></li>
+            <li>Ga nu naar het tabblad GEGEVENS, selecteer hier F2:F8 en druk op <code>Enter</code>. Mocht je een fout hebben gemaakt kan je dit met backspace weer verwijderen.</li>
+            <li>Uiteindelijk komt het volgende in de gegevensvalidatiebalk te staan: <code>=GEGEVENS!$A$2:$A$8</code></li>
+        </ol>
+        <p>Als de bewerking succesvol is kan je nu voor elke cel van kolom F een docent selecteren. Je hebt voor het eerst een stamtabel gebruikt, yeah🥳</p>
+        <section class="opdracht">
+           <p>Opdracht: Vul cellen F4:F23 door selecties te maken.</p> 
+        </section>
+
+        <h2>Koppeltabellen</h2>
+        <p>Een andere veelgebruikte speciale tabel is een koppeltabel. Een koppeltabel koppelt gegevens uit tweede of meer tabellen aan elkaar. Het grote voordeel van koppeltabbelen is voornamelijk overzichtelijkheid. Je kan info uit twee tabellen bijvoorbeeld verzamelen in een simpelere tabel. </p>
+        <ol>
+            <li>Download <a href="/data/opdracht-5-voorbeeld.xlsx" class="breadcrumb">hier</a> de Excel-sheet waarmee je gaat werken.</li>
+            <li>Kopieër het tabblad naar jouw eigen Excel sheet</li>
+            <li>Maak een nieuw tabblad "Naam-cijfer" aan. Het doel van dit blad is het koppelen van de naam van een student aan het cijfer.</li>
+            <li>Maak in dit nieuwe tabblad kolom A en kolom B 20 breed. Geef A1 de waarde "Naam" en geef B1 de waarde "Cijfer".</li>
+        </ol>
+        <p>Toevallig staan de namen nu in dezelfde volgorde als de studentnummers; Maar dit hoeft natuurlijk niet altijd zo te zijn. Vandaar dat we een formule gaan gebruiken.</p>
+        <ol class="list">
+            <li>Klik op A2. Voer de formule <code>='Studentnummer-naam'!B2</code> in. Dit betekent dat de waarde van deze cel de waarde van de cel B2 in het tabblad "Studentnummer-naam" moet zijn.</li>
+            <li>Trek de formule naar beneden tot en met A21 </li>
+            <li>We gaan nu het studentnummer per naam opzoeken. We gebruiken hiervoor tijdelijk even B2. Selecteer B2.</li>
+            <li>Vul hier de formule <code>=X.ZOEKEN()</code>in.</li>
+            <li>Vul tussen deze haken A2 in. De formule wordt dus <code>X.ZOEKEN(A2)</code>.</li>
+            <li>Wanneer je op ENTER drukt krijg je een foutmelding. Dit komt omdat de functie <code>X.ZOEKEN()</code>minimaal 3 dingen moet hebben. De waarde die je moet zoeken, waar de waarde gezocht moet worden en wat teruggegeven moet worden. </li>
+            <li>Zet een <code>;</code>achter A2. De formule wordt: <code>X.ZOEKEN(A2;)</code>.</li>
+            <li>Wanneer je dit hebt gedaan ga je naar het tabblad "Studentnummer-naam". Selecteer B2:B21. De formule wordt nu: <code>=X.ZOEKEN(A2;'Studentnummer-naam'!B2:B21)</code></li>
+            <li>Zet hier opnieuw een <code>;</code> achter. De formule wordt: <code>=X.ZOEKEN(A2;'Studentnummer-naam'!B2:B21;)</code></li>
+            <li>Als laatste selecteren we A2:A21 en drukken we op <code>ENTER</code></li>
+            <li>Deze formule kan je niet slepen, althans voor nu werkt het MAAR...... Wanneer je de formule sleept denkt Excel dat je door wilt gaan met "tellen". Excel telt automatisch de A- en B-kolommen door en dit willen we niet!</li>
+            <li>Om dit te voorkomen passen we de formule iets aan. Selecteer B2 en plaats voor de rij en de kolom een <code>$</code>. De formule wordt: <code>=X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21)</code> </li>
+            <li>Sleep de formule nu van B1 naar B21. </li>
+        </ol>
+        <p>Als alles goed is gegaan wordt nu het juiste studentnummer bij de juiste naam gezocht. Ook als je de volgorde van de namen aanpast / vaker dezelfde naam in de A-kolom zet. Probeer maar!</p>
+        <section class="wistjedat">
+            <h3>Wist je dat...</h3>
+            <p>Excel telt automatisch door, vaak handig maar soms ook niet. Als je bijvoorbeeld op B3 klikt zie je dat de formule iets anders is dan die bij bijvoorbeeld A5. Dit komt door het automatisch doortellen van Excel. De waarden waar een <code>$</code> voor staat tellen niet verder. Dit noemen we <em>absolute</em> waarden! </p>
+        </section>
+        <h3>Hoe werkt deze formule?</h3>
+        <p>Het is goed even stap voor stap door te nemen hoe deze formule nu werkt:</p>
+        <ol class="list">
+            <li>De formule <code>X.ZOEKEN</code> heeft drie waardes (in de juiste volgorde) nodig; De waarde die wordt gezocht, het bereik waarin gezocht moet worden, en het bereik waar in teruggegeven moet worden.</li>
+            <li>Wij hebben als de waarde die gezocht moet worden de cel links aangegeven.</li>
+            <li>Bijvoorbeeld: B2 kijkt naar A2, B3 kijkt naar A3 enzovoort. </li>
+            <li>Die waarde wordt gezocht in het tabblad "Studentnummer-naam" tussen B2:B21. Ons zoekbereik.</li>
+            <li>Vervolgs wordt uit het teruggavebereik A2:A21 de juiste waarde teruggeven. Ons teruggavebereik.</li>
+        </ol>
+        <section class="opdracht">
+            Opdracht: Dit soort lange formules zijn lastig om te begrijpen. Lees de werking van de formule nog een extra keer door en vraag hulp indien je dit moeilijk vindt.
+        </section>
+        <p>De koppeltabel is nog niet helemaal af. We wilden namelijk het cijfer aan de naam koppelen. Hiervoor gaan we formules combineren in de volgende sectie. </p>
+        <a href="/pages/5.html" class="breadcrumb">4. Gegevens Filteren en Sorteren </a>
+</body>
+
+</html>

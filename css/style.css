@@ -148,7 +148,13 @@ ul,ol{
     background:hsl(0, 0%, 80%);
     padding:10px;
     border:1px dashed black;
+}
 
+.wistjedat{
+    background:white;
+    border:1px dotted orangered;
+    font-size:75%;
+    padding:10px;
 }
 
 @keyframes popup {
