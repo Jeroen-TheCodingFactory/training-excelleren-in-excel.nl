@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>5. Speciale Tabellen</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -14,6 +14,7 @@
     </header>
     <main class="page">
         <a href="/" class="breadcrumb">Terug naar Home</a>
+        <a href="/pages/4.html" class="breadcrumb">Terug naar 4. Gegevens Filteren, Sorteren, Verbergen </a>
         <h1>5. Speciale tabellen </h1>
         <p>Vaak heb je gegevens van een tabblad nodig in een ander tabblad. Kopieert is een optie maar meestal niet de meest efficiënte oplossing. Wanneer je gegevens kopieërt worden ze automatisch veel vatbaarder voor fouten. En wat gebeurt er wanneer je de originele gegevens wijzigt? Om dit principe goed te kunnen aanduiden doen we een aantal voorbereidingen:</p>
         <ol class="list">
@@ -52,6 +53,11 @@
             <li>Maak een nieuw tabblad "Naam-cijfer" aan. Het doel van dit blad is het koppelen van de naam van een student aan het cijfer.</li>
             <li>Maak in dit nieuwe tabblad kolom A en kolom B 20 breed. Geef A1 de waarde "Naam" en geef B1 de waarde "Cijfer".</li>
         </ol>
+        <section class="wistjedat">
+            <h3>Wist je dat...</h3>
+            <p>Een <code>;</code> een scheiddingsteken is in Excel? Bij <code>=SOM()</code> kan je bijvoorbeeld drie cellen opgeven, die worden gescheiden door het scheidingsteken <code>;</code>. Bijvoorbeeld:
+            <code>=SOM(A2;B3;C5)</code></p>
+        </section>
         <p>Toevallig staan de namen nu in dezelfde volgorde als de studentnummers; Maar dit hoeft natuurlijk niet altijd zo te zijn. Vandaar dat we een formule gaan gebruiken.</p>
         <ol class="list">
             <li>Klik op A2. Voer de formule <code>='Studentnummer-naam'!B2</code> in. Dit betekent dat de waarde van deze cel de waarde van de cel B2 in het tabblad "Studentnummer-naam" moet zijn.</li>
@@ -86,7 +92,7 @@
             Opdracht: Dit soort lange formules zijn lastig om te begrijpen. Lees de werking van de formule nog een extra keer door en vraag hulp indien je dit moeilijk vindt.
         </section>
         <p>De koppeltabel is nog niet helemaal af. We wilden namelijk het cijfer aan de naam koppelen. Hiervoor gaan we formules combineren in de volgende sectie. </p>
-        <a href="/pages/5.html" class="breadcrumb">4. Gegevens Filteren en Sorteren </a>
+        <a href="/pages/6.html" class="breadcrumb">Naar 6. Speciale Tabellen </a>
 </body>
 
 </html>
