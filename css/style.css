@@ -22,6 +22,7 @@ body{
     font-family: "Open Sans", sans-serif;
     background: linear-gradient(to bottom right,rgb(189,21,33),5%, rgb(242,114,0), rgb(255,164,13));
     color:white;
+    line-height: 1.55;
 }
 
 
@@ -141,7 +142,7 @@ ul,ol{
 .list{
     display:flex;
     flex-direction:column;
-    gap:5px;
+    gap:20px;
 }
 
 .opdracht{
