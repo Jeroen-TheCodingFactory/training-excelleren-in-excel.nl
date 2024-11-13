@@ -145,8 +145,9 @@ ul,ol{
     gap:20px;
 }
 
-.wistjedat > code{
-    display:block;
+ code{
+    text-wrap: wrap;
+    word-wrap: break-word;
 }
 
 .opdracht{
@@ -162,6 +163,10 @@ ul,ol{
     padding:10px;
 }
 
+iframe{
+    width:100%;
+}
+
 @keyframes popup {
     from{
         opacity:0;
@@ -174,7 +179,16 @@ ul,ol{
 
 @media screen and (max-width:1000px) {
     .body--page{
-        grid-template-columns: 10% 80% 10%;
+        grid-template-columns: 0% 100% 0%;
     }
     
+}
+
+@media screen and (max-width: 600px){
+    .cards{
+        grid-template-columns: 100%;
+    }
+    .mainHeader{
+        display:none;
+    }
 }

@@ -52,7 +52,8 @@
             <li>Selecteer bij Toestaan lijst en selecteer bij bron het tabblad "Studentnummer-naam" B2:B21 </li>
             <li>Druk op <code>Enter</code> en vervolgens op <code>OK</code></li>
             <li>Selecteer de A kolom door hierop te klikken. Doe een rechtsklik en klik op <code>verwijderen</code>.</li>
-            <li>Selecteer A2, de originele naam moet nu van de samengevoegde cel komen. Veranderd de tekst #VERW! naar D9. De formule wordt: <code>=X.ZOEKEN(X.ZOEKEN(D9;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!$A$4:$A$23;'Cijfers Excel 101'!$E$4:$E$23)</code></li>
+            <li>Selecteer A2, de originele naam moet nu van de samengevoegde cel komen. Veranderd de tekst #VERW! naar D9. De formule wordt: </li>
+            <li><code>=X.ZOEKEN(X.ZOEKEN(D9;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!$A$4:$A$23;'Cijfers Excel 101'!$E$4:$E$23)</code></li>
             <li>Selecteer een naam in D9 / de grote cel. </li>
         </ol>
         <section class="opdracht">
@@ -90,9 +91,12 @@
             <li>We checken in de buitenste als eerst of het een onvoldoende is door te kijken of het getal kleiner is dan 5,5. Dan zijn we namelijk snel klaar. </li>
             <li>Nu gaan we checken of het cijfer kleiner is dan een 8,1. Dus een cijfer tussen de 5,5-8 is een voldoende. Dit doen we weer met een ALS()</li>
             <li>Vul op de plek waar <code>"Voldoende"</code> stond <code>=ALS()</code> in. De formule wordt: <code>=ALS(A2<5,5;"Onvoldoende";ALS())</code></li>
-            <li>In de binnenste ALS checken we opnieuw het cijfer in A2, maar nu of deze kleiner is dan een 8,1. De formule wordt nu: <code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1))</code></li>
-            <li>Als het cijfer kleiner is dan een 8,1 dan is het dus een voldoende. We voegen een <code>;</code> toe achter het criteria in de binnenste als en de tekst "Voldoende". De formule wordt: <code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1;"Voldoende"))</code></li>
-            <li>Als het cijfer niet een voldoende is.... is het een goed! Dit komt omdat de buitenste ALS al alle onvoldoende opvangt. Dit kunnen we ook in de formule zetten: <code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1;"Voldoende";"Goed"))</code></li>
+            <li>In de binnenste ALS checken we opnieuw het cijfer in A2, maar nu of deze kleiner is dan een 8,1. De formule wordt nu:</li>
+            <li><code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1))</code></li>
+            <li>Als het cijfer kleiner is dan een 8,1 dan is het dus een voldoende. We voegen een <code>;</code> toe achter het criteria in de binnenste als en de tekst "Voldoende". De formule wordt: </li>
+            <li><code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1;"Voldoende"))</code></li>
+            <li>Als het cijfer niet een voldoende is.... is het een goed! Dit komt omdat de buitenste ALS al alle onvoldoende opvangt. Dit kunnen we ook in de formule zetten: </li>
+            <li><code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1;"Voldoende";"Goed"))</code></li>
             <li>Druk op <code>Enter</code></li>
         </ol>
         <p>En zo zijn we opeens aan het einde. Je hebt je eerste tool gemaakt in Excel! Gefeliciteerd! Dit is het begin van het beheersen van een tool die ontzettend handig kan zijn voor je werk. Ik hoop dan ook dat je net zoveel plezier hebt gehad bij het uitvoeren als ik bij het maken. </p>
