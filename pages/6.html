@@ -51,8 +51,8 @@
             <li>Selecteer de samenvoegde cel en zoek in de zoekbalk van Excel naar gegevensvalidatie. Klik op het bovenste resultaat.</li>
             <li>Selecteer bij Toestaan lijst en selecteer bij bron het tabblad "Studentnummer-naam" B2:B21 </li>
             <li>Druk op <code>Enter</code> en vervolgens op <code>OK</code></li>
-            <li>Selecteer de A kolom door hierop te klikken. Doe een rechtsklik en klik op <code>verwijderen</code>.</li>
-            <li>Selecteer A2, de originele naam moet nu van de samengevoegde cel komen. Veranderd de tekst #VERW! naar D9. De formule wordt: </li>
+            <li>Selecteer de A kolom (van het Naam-Cijfer tabblad) door hierop te klikken. Doe een rechtsklik en klik op <code>verwijderen</code>.</li>
+            <li>Selecteer A2, de originele naam moet nu van de samengevoegde cel komen. Verander de tekst #VERW! naar D9. De formule wordt: </li>
             <li><code>=X.ZOEKEN(X.ZOEKEN(D9;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!$A$4:$A$23;'Cijfers Excel 101'!$E$4:$E$23)</code></li>
             <li>Selecteer een naam in D9 / de grote cel. </li>
         </ol>
@@ -66,8 +66,8 @@
             <li>Selecteer D3:I7 en voeg deze cellen samen.</li>
             <li>Laten we zeggen dat we deze tool gebruiken om een studentennummer aan een naam te koppelen, het cijfer op te vragen en deze om te zetten naar een Onvoldoende, Voldoende en Goed. </li>
             <li>Selecteer D7 en vul in de formulebalk <code>=ALS()</code> in.</li>
-            <li>ALS heeft drie dingen nodig: een criteria, wat als het waar is, wat als het niet waar is. We vullen bij de criteria onze cijfer cel A2 in. De fomrule wordt: <code>=ALS(A2)</code></li>
-            <li>We willen weten of het cijfer onder de 5,5 is. We zetten achter A2 een kleiner dan (<) teken en dan 5,5. De formule wordt: <code> =ALS(A2 < 5,5)</code></li>
+            <li>ALS heeft drie dingen nodig: een criteria, wat als het waar is, wat als het niet waar is. We vullen bij de criteria ons cijfer cel A2 in. De formule wordt: <code>=ALS(A2)</code></li>
+            <li>We willen weten of het cijfer onder de 5,5 is. We zetten achter A2 een kleiner dan (<) teken en dan 5,5 in de nieuwe formule. De formule wordt: <code> =ALS(A2 < 5,5)</code></li>
             <li>Zet een <code>;</code> hierachter. De formule wordt <code>=ALS(A2<5,5;)</code></li>
             <li>Als je lager dan een 5,5 hebt heb je een onvoldoende. Hoger een voldoende. Na de puntkomma zetten we naar wat we moeten neerzetten als het cijfer dus <strong>lager</strong> is dan een 5,5. Vul hier <code>"Onvoldoende"</code> in. De formule wordt: <code>=ALS(A2<5,5;"Onvoldoende")</code></li>
             <li>Vul hierachter een <code>;</code> in. De formule wordt <code>=ALS(A2<5,5;"Onvoldoende";)</code></li>

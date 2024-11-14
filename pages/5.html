@@ -46,7 +46,7 @@
         </section>
 
         <h2>Koppeltabellen</h2>
-        <p>Een andere veelgebruikte speciale tabel is een koppeltabel. Een koppeltabel koppelt gegevens uit tweede of meer tabellen aan elkaar. Het grote voordeel van koppeltabbelen is voornamelijk overzichtelijkheid. Je kan info uit twee tabellen bijvoorbeeld verzamelen in een simpelere tabel. </p>
+        <p>Een andere veelgebruikte speciale tabel is een koppeltabel. Een koppeltabel koppelt gegevens uit twee of meer tabellen aan elkaar. Het grote voordeel van koppeltabbelen is voornamelijk overzichtelijkheid. Je kan info uit twee tabellen bijvoorbeeld verzamelen in een simpelere tabel. </p>
         <ol>
             <li>Download <a href="/data/opdracht-5-voorbeeld.xlsx" class="breadcrumb">hier</a> de Excel-sheet waarmee je gaat werken.</li>
             <li>Kopieër het tabblad naar jouw eigen Excel sheet</li>
@@ -56,7 +56,12 @@
         <section class="wistjedat">
             <h3>Wist je dat...</h3>
             <p>Een <code>;</code> een scheiddingsteken is in Excel? Bij <code>=SOM()</code> kan je bijvoorbeeld drie cellen opgeven, die worden gescheiden door het scheidingsteken <code>;</code>. Bijvoorbeeld:
+            <p>Als Excel (door de organisatie) is ingesteld op Amerikaans is het scheidingsteken een <code>,</code></p>
             <code>=SOM(A2;B3;C5)</code></p>
+        </section>
+        <section class="wistjedat">
+            <h3>Wist je dat...</h3>
+            <p>Als je de fout <code>#NAAM?</code> krijgt wanneer je een ingebouwde functie gebruikt de functie niet herkent wordt door Excel. Je hebt dan waarschijnlijk niet de nieuwste versie van Excel op je laptop staan.</p>
         </section>
         <p>Toevallig staan de namen nu in dezelfde volgorde als de studentnummers; Maar dit hoeft natuurlijk niet altijd zo te zijn. Vandaar dat we een formule gaan gebruiken.</p>
         <ol class="list">
@@ -72,7 +77,7 @@
             <li>Als laatste selecteren we A2:A21 en drukken we op <code>ENTER</code></li>
             <li>Deze formule kan je niet slepen, althans voor nu werkt het MAAR...... Wanneer je de formule sleept denkt Excel dat je door wilt gaan met "tellen". Excel telt automatisch de A- en B-kolommen door en dit willen we niet!</li>
             <li>Om dit te voorkomen passen we de formule iets aan. Selecteer B2 en plaats voor de rij en de kolom een <code>$</code>. De formule wordt: <code>=X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21)</code> </li>
-            <li>Sleep de formule nu van B1 naar B21. </li>
+            <li>Sleep de formule nu van B2 naar B21. </li>
         </ol>
         <p>Als alles goed is gegaan wordt nu het juiste studentnummer bij de juiste naam gezocht. Ook als je de volgorde van de namen aanpast / vaker dezelfde naam in de A-kolom zet. Probeer maar!</p>
         <section class="wistjedat">
