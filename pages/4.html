@@ -17,11 +17,12 @@
         <a href="/pages/3.html" class="breadcrumb">Terug naar 3. Functies</a>
         <h1>4. Gegevens Filteren, Sorteren, Verbergen </h1>
         <p>Laten we met een tweede real-life casus beginnen. Download <a href="/data/opdracht-4-voorbeeld.xlsx" class="breadcrumb">hier</a> een Excel
-            die je gaat gebruiken voor de sectie.</p>
+            die je gaat gebruiken voor deze sectie.</p>
         <h2>Tabblad Kopiëren</h2>
-        <p>Laten we eerst dit blad in ons eigen Excel bestand inladen.</p>
+        <p>Laten we eerst dit blad in ons eigen Excel bestand kopieëren.</p>
         <ol class="list">
-            <li>Zorg dat je jouw eigen Excel (training Excel) open hebt staan.</li>
+            <li>Zorg dat je, jouw eigen Excel (training Excel) open hebt staan.</li>
+            <li>Zorg dat je hiernaast ook de gedownloade Excel hebt openstaan.</li>
             <li>Klik met de rechtermuisknop op de naam van het tabblad van het gedownloade bestand. Kies vervolgens
                 <code>Verplaatsen of Kopiëren.</code></li>
             <li>Klik bij <code>Naar map:</code>op jouw eigen Excel.</li>
@@ -29,22 +30,25 @@
         </ol>
         <p>Als alles goed is gegaan zit het tabblad nu in jouw eigen Excel bestand!</p>
         <h2>Berekening maken</h2>
+        <p>Het tabblad <em>Cijfers Excel 101</em> geeft drie cijfers weer van een klas met de naam 101. </p>
         <p>Zoals je ziet heeft elke student een studentnummer, drie cijfers en een aanwezigheidspercentage. De regels
             voor het eindcijfer zijn als volgt:</p>
         <em>Een student zijn eindcijfer wordt berekend aan de hand van zijn deelcijfers. Het eerste cijfer (cijfer 1)
             telt voor 20% mee, het tweede cijfer (cijfer 2) voor 30% en het derde cijfer (cijfer 3) voor 50%.</em>
         <p>We kunnen deze berekening maken door:</p>
         <em>Eindcijfer = cijfer1 x 0.2 + cijfer2 x 0.3 + cijfer3 * 0.5</em>
+        <p>Mocht je bovenstaande berekening niet snappen, geen probleem. Het gaat er hier om dat je zelf een berekening kan maken.</p>
         <ol class="list">
             <li>Klik op E4.</li>
-            <li>Vul hier <code>=</code> in, we gaan een eigen berekening maken!</li>
+            <li>Vul hier <code>=</code> in, we gaan hier een eigen berekening maken! Druk hierna op <code>ENTER</code>.</li>
             <li>Vul hierna B4 * 0,2 in. Nu staat er dus <code>=B4 * 0,2</code>. Druk op <code>ENTER</code></li>
             <li>Als het goed is krijg je nu een uitslag in E4. We hoeven nu alleen maar de rest van de deelcijfers ook
                 te berekenen: voeg <code>+ C4 * 0,3</code> en <code>+ D4 * 0,5 </code> toe. Het totaal wordt:
                 <code>=B4 * 0,2 + C4 * 0,3 + D4 * 0,5</code>.</li>
+                <li>Druk opnieuw op <code>ENTER</code>.</li>
         </ol>
-        <p>Awww yeah! De formule werkt nu voor de bovenste student. Maar niet voor allemaal. Je kan nu elke cel
-            handmatig de formule aanpassen of je doet het efficiënt:</p>
+        <p>Awww yeah! De formule werkt nu voor de bovenste student. Maar niet voor al onze studenten. Je kan nu elke cel
+            handmatig de formule aanpassen, of je doet het efficiënt:</p>
         <ol class="list">
             <li>Klik op E4.</li>
             <li>Sleep het vierkantje rechtsonderin naar de andere cellen waar je de berekening ook wilt gebruiken.</li>
@@ -89,7 +93,7 @@
         <ol class="list">
             <li>Selecteer H4.</li>
             <li>Vul in de tekstbalk <code>=GEMIDDELDE()</code> in.</li>
-            <li>Voeg tussen de <code>()</code> B4:B23 in. Druk op <code>ENTER</code></CODE></li>
+            <li>Voeg tussen de <code>()</code> B4:B23 in. Er komt dus te staan: <code>=GEMIDDELDE(B4:B23)</code>. Druk op <code>ENTER</code></CODE></li>
             <li>Sleep de formule van H4 via het vierkantje naar I4, J4 en K4. </li>
         </ol>
         <p>Als alles goed gaat heb je nu de gemiddelden van alle cijfers en het eindcijfer berekend.</p>
