@@ -16,93 +16,159 @@
         <a href="/" class="breadcrumb">Terug naar Home</a>
         <a href="/pages/5.html" class="breadcrumb">Terug naar 5. Speciale tabellen </a>
         <h1>6. Functies combineren</h1>
-        <p>Vaak is een enkele formule niet genoeg en moet je het resultaat van een formule gebruiken in een andere formule. In de wiskunde kennen we dit ook:</p>
+        <p>Vaak is een enkele formule niet genoeg en moet het resultaat van een formule gebruikt worden in een andere
+            formule. In de wiskunde kennen we dit ook:</p>
         <code>Stel je hebt de functie y(x) = 2x + 4.  En z(y) = 8y</code>
         <code>En stel dat we willen weten wat z is bij een x van 3. Hoe doen we dit?</code>
         <code>We vullen eerst de x in de y formule in. De formule wordt dan y(x) = 2 x 3 + 4 = 10.</code>
         <code>Voor x = 3 is y = 10. Die y kunnen we gebruiken om z te berekenen door deze in die functie in te voeren.</code>
         <code>z(10) = 8 x 10 = 80. Bij x = 3 is z = 80. We gebruiken dus de uitkomst van van de ene formule in de andere! We zouden dit zelfs kunnen versimpelen door de formules te combineren.</code>
-        <p>Ook in Excel doen we dit ontzettend vaak. Om dit te illustreren gaan we terug naar de formule van de vorige sectie:</p>
+        <p>Ook in Excel doen we dit ontzettend vaak. Om dit te illustreren gaan we terug naar de formule van de vorige
+            sectie:</p>
         <ol class="list">
-            <li>Als het goed is heb je een tabblad met de naam "Naam-Cijfer". In dit tabblad kan je links een naam aangeven en krijg rechts het studentnummer.</li>
-            <li>Maar, dit was niet de bedoeling! We willen namelijk het cijfer opzoeken in plaats van het studentnummer. Het cijfer staat in het tabblad "Cijfers Excel 101", maar hier staan weer geen namen in. Hiervoor hebben wij de koppeltabel gemaakt. Om deze twee te verbinden.</li>
-            <li>Selecteer B1 en klik op het formulevak. Voor de eerste X zetten we opnieuw een <code>X.ZOEKEN()</code>. Haal het sluitende haakje weg. De formule wordt: <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21)</code>  </li>
-            <li>Plaats het sluitende haakje helemaal achteraan de formule. De formule wordt: <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21))</code></li>
-            <li>Wat we nu doen is het <strong>resultaat</strong> van de <strong>binnenste</strong> X.ZOEKEN gebruiken als zoekwaarde voor de buitenste X.ZOEKEN(). Simpel uitgelegd: het gevonden studentnummer wordt de zoekwaarde van de buitenste X.ZOEKEN.</li>
-            <li>Tussen de twee laatste sluitende haken () voeren we een <code>;</code> in. De formule wordt: <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);)</code> </li>
-            <li>Klik rechts naast  de <code>;</code>. Nu moeten we aangeven <strong>waar</strong> de buitenste X.ZOEKEN() het studentnummer moet gaan zoeken. We willen het studentnummer zoeken in het tabblad "Cijfers Excel 101". Selecteer A4:A23. De formule wordt: <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!A4:A23)</code></li>
-            <li>Zet hier opnieuw een <code>;</code> neer en klik rechts naast deze <code>;</code> . De formule wordt: <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!A4:A23;)</code> </li>
-            <li>We hebben nu aangegeven waar het studentnummer moet worden gezocht. Nu moeten we nog aangegeven <strong>wat</strong> er in die rij teruggeven moet worden. Klik rechts naast de <code>;</code> en selecteer in het tabblad "Cijfers Excel 101" E4:E24. De formule wordt: <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!A4:A23;'Cijfers Excel 101'!E4:E23)</code></li>
+            <li>Als het goed is heb je een tabblad met de naam "Naam-Cijfer". In dit tabblad kan je links een naam
+                aangeven en krijg je rechts het studentnummer.</li>
+            <li>Maar, dit was niet de bedoeling! We willen namelijk het cijfer opzoeken in plaats van het studentnummer.
+                Het cijfer staat in het tabblad "Cijfers Excel 101", maar hier staan weer geen namen in. Hiervoor hebben
+                wij deze koppeltabel gemaakt, om deze twee te verbinden.</li>
+            <li>Selecteer B2 en klik op het formulevak. Voor de eerste X zetten we opnieuw een <code>X.ZOEKEN()</code>.
+                De formule wordt:
+                <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!B2:B21;'Studentnummer-naam'!A2:A21)</code>
+            </li>
+            <li>Plaats het sluitende haakje helemaal achteraan de formule. De formule wordt:
+                <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!B2:B21;'Studentnummer-naam'!A2:A21))</code>.
+            </li>
+            <li>Wat we nu doen is het <strong>resultaat</strong> van de <strong>binnenste</strong> X.ZOEKEN gebruiken
+                als zoekwaarde voor de buitenste X.ZOEKEN(). Simpel uitgelegd: het gevonden studentnummer wordt de
+                zoekwaarde van de buitenste X.ZOEKEN.</li>
+            <li>Tussen de twee laatste sluitende haken )) voeren we een <code>;</code> in. De formule wordt:
+                <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!B2:B21;'Studentnummer-naam'!A2:A21);)</code>
+            </li>
+            <li>Klik rechts naast de <code>;</code>. Nu moeten we aangeven <strong>waar</strong> de buitenste X.ZOEKEN()
+                het studentnummer moet gaan zoeken (uit de eerste X.ZOEKEN). We willen het studentnummer zoeken in het tabblad "Cijfers Excel
+                101". Selecteer A4:A23, de formule wordt:
+                <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!B2:B21;'Studentnummer-naam'!A2:A21);'Cijfers Excel 101'!A4:A23)</code>
+            </li>
+            <li>Zet hier opnieuw een <code>;</code> neer en klik rechts naast deze <code>;</code> . De formule wordt:
+                <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!B2:B21;'Studentnummer-naam'!A2:A21);'Cijfers Excel 101'!A4:A23;)</code>
+            </li>
+            <li>We hebben nu aangegeven waar het studentnummer moet worden gezocht. Nu moeten we nog aangegeven
+                <strong>wat</strong> er in die rij teruggeven moet worden. Zet weer een <code>;</code> voor de <code>)</code>. Klik rechts naast de <code>;</code> en
+                selecteer in het tabblad "Cijfers Excel 101" E4:E24. De formule wordt:
+                <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!B2:B21;'Studentnummer-naam'!A2:A21);'Cijfers Excel 101'!A4:A23;'Cijfers Excel 101'!E4:E23)</code>
+            </li>
             <li>Druk op <code>Enter</code>.</li>
         </ol>
-        <p>Nu wordt het eindcijfer van een studentnummer <strong>in de eerste cel van kolom B, B2</strong> weergegeven. Om de formule te kunnen slepen en te voorkomen dat Excel gaat tellen moeten we het volgende doen:</p>
+        <p>Nu wordt het eindcijfer van een studentnummer <strong>in de eerste cel van kolom B, B2</strong> weergegeven.
+            Om de formule te kunnen slepen en te voorkomen dat Excel gaat tellen moeten we het volgende doen:</p>
         <ol class="list">
-            <li>Zet net als in de vorige sectie een <code>$</code> teken voor de kolom en rij indicatie van het andere tabblad. </li>
-            <li>De formule wordt dan: <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!$A$4:$A$23;'Cijfers Excel 101'!$E$4:$E$23)</code></li>
+            <li>Zet net als in de vorige sectie een <code>$</code> teken voor de kolom en rij indicatie van het andere
+                tabblad.</li>
+            <li>De formule wordt dan:
+                <code>=X.ZOEKEN(X.ZOEKEN(A2;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!$A$4:$A$23;'Cijfers Excel 101'!$E$4:$E$23)</code>
+            </li>
             <li>Druk op <code>ENTER</code></li>
             <li>Sleep de formule naar beneden over B3:B24.</li>
         </ol>
-        <p>Als alles goed is gegaan heb je een werkende koppeltabel. De namen worden gebruikt om in het tabblad "Studentnummer-naam" het studentnummer op te zoeken en vervolgens wordt dit nummer gebruikt om in het tabblad "Cijfers Excel 101" het eindcijfer op te zoeken.</p>
+        <p>Als alles goed is gegaan heb je een werkende koppeltabel. De namen worden gebruikt om in het tabblad
+            "Studentnummer-naam" het studentnummer op te zoeken en vervolgens wordt dit nummer gebruikt om in het
+            tabblad "Cijfers Excel 101" het eindcijfer op te zoeken.</p>
         <h2>Combineren met selectie & voorwaardelijke opmaak</h2>
         <p>We kunnen onze tool nog wat gaver maken door er een soort zoekmachine van te maken:</p>
         <ol class="list">
             <li>Selecteer A3:B21 en druk op <code>delete</code> (sorry!).</li>
             <li>Selecteer E9:J12 en klik op samenvoegen.</li>
-            <li>Selecteer de samenvoegde cel en zoek in de zoekbalk van Excel naar gegevensvalidatie. Klik op het bovenste resultaat.</li>
+            <li>Selecteer de samenvoegde cel en zoek in de zoekbalk van Excel naar gegevensvalidatie. Klik op het
+                bovenste resultaat.</li>
             <li>Selecteer bij Toestaan lijst en selecteer bij bron het tabblad "Studentnummer-naam" B2:B21 </li>
-            <li>Druk op <code>Enter</code> en vervolgens op <code>OK</code></li>
-            <li>Selecteer de A kolom (van het Naam-Cijfer tabblad) door hierop te klikken. Doe een rechtsklik en klik op <code>verwijderen</code>.</li>
-            <li>Selecteer A2, de originele naam moet nu van de samengevoegde cel komen. Verander de tekst #VERW! naar D9. De formule wordt: </li>
-            <li><code>=X.ZOEKEN(X.ZOEKEN(D9;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!$A$4:$A$23;'Cijfers Excel 101'!$E$4:$E$23)</code></li>
+            <li>Druk op <code>Enter</code> en vervolgens op <code>OK</code>.</li>
+            <li>Selecteer de A kolom (van het Naam-Cijfer tabblad) door hierop te klikken. Doe een rechtsklik en klik op
+                <code>verwijderen</code>.</li>
+            <li>Selecteer A2, de originele naam moet nu van de samengevoegde cel komen. Verander de tekst #VERW! naar
+                D9. We gaan onze originele formule iets aanpassen, je mag deze kopieëren. De formule wordt: </li>
+            <li><code>=X.ZOEKEN(X.ZOEKEN(D9;'Studentnummer-naam'!$B$2:$B$21;'Studentnummer-naam'!$A$2:$A$21);'Cijfers Excel 101'!$A$4:$A$23;'Cijfers Excel 101'!$E$4:$E$23)</code>
+            </li>
             <li>Selecteer een naam in D9 / de grote cel. </li>
         </ol>
+        <p>Als alles goed is gegaan heb je nu een eigen soort zoekmachine gemaakt! Supergaaf!</p>
         <section class="opdracht">
-            <p>Opdracht: Maak de sheet wat op. Centreer de tekst in D9, maak deze groter en bold. Maak ook A1 en A2 wat op naar eigen inzicht.</p>
+            <p>Opdracht: Maak de sheet wat op. Centreer de tekst in D9, maak deze groter en bold. Maak ook A1 en A2 wat
+                op naar eigen inzicht.</p>
+        </section>
+                <section class="opdracht">
+            <p>Zorg voor de volgende voorwaardelijke opmaak:</p>
+            <ol class="list">
+                <li>Als het cijfer hoger of gelijk is aan een 6 = groene tekst met groene letters.</li>
+                <li>Als het cijfer een 5 t/m een 5,9 is, oranje tekst met oranje opmaak.</li>
+                <li>Is het cijfer lager dan een 5? Dan een opmaak van rode tekst met rode opmaak.</li>
+            </ol>
         </section>
 
         <h2>ALS....</h2>
         <p>Als allerlaatste gaan we nog een veelgebuikte formule gebruiken; <code>ALS()</code>:</p>
         <ol class="list">
             <li>Selecteer D3:I7 en voeg deze cellen samen.</li>
-            <li>Laten we zeggen dat we deze tool gebruiken om een studentennummer aan een naam te koppelen, het cijfer op te vragen en deze om te zetten naar een Onvoldoende, Voldoende en Goed. </li>
+            <li>Laten we zeggen dat we deze tool gebruiken om een studentennummer aan een naam te koppelen, het cijfer
+                op te vragen en deze om te zetten naar een Onvoldoende, Voldoende of Goed. </li>
             <li>Selecteer D7 en vul in de formulebalk <code>=ALS()</code> in.</li>
-            <li>ALS heeft drie dingen nodig: een criteria, wat als het waar is, wat als het niet waar is. We vullen bij de criteria ons cijfer cel A2 in. De formule wordt: <code>=ALS(A2)</code></li>
-            <li>We willen weten of het cijfer onder de 5,5 is. We zetten achter A2 een kleiner dan (<) teken en dan 5,5 in de nieuwe formule. De formule wordt: <code> =ALS(A2 < 5,5)</code></li>
-            <li>Zet een <code>;</code> hierachter. De formule wordt <code>=ALS(A2<5,5;)</code></li>
-            <li>Als je lager dan een 5,5 hebt heb je een onvoldoende. Hoger een voldoende. Na de puntkomma zetten we naar wat we moeten neerzetten als het cijfer dus <strong>lager</strong> is dan een 5,5. Vul hier <code>"Onvoldoende"</code> in. De formule wordt: <code>=ALS(A2<5,5;"Onvoldoende")</code></li>
-            <li>Vul hierachter een <code>;</code> in. De formule wordt <code>=ALS(A2<5,5;"Onvoldoende";)</code></li>
-            <li>Na de <code>;</code> voeren we de tekst Voldoende in tussen quotes. De formule wordt: <code>=ALS(A2<5,5;"Onvoldoende";"Voldoende")</code></li>
+            <li>ALS heeft drie dingen nodig: een criteria, wat als het waar is, wat als het niet waar is. We vullen bij
+                de criteria ons cijfer cel A2 in. De formule wordt: <code>=ALS(A2)</code></li>
+            <li>We willen weten of het cijfer onder de 5,5 is. We zetten achter A2 een kleiner dan (&lt) teken en dan 5,5
+                    in de nieuwe formule. De formule wordt: <code> =ALS(A2 &lt 5,5)</code>.
+            </li>
+            <li>Zet een <code>;</code> hierachter. De formule wordt <code>=ALS(A2  &lt 5,5;) </code></li>
+            <li>Als je lager dan een 5,5 hebt heb je een onvoldoende. Hoger een voldoende. Na de puntkomma zetten we
+                naar wat we moeten neerzetten als het cijfer dus <strong>lager</strong> is dan een 5,5. Vul hier
+                <code>"Onvoldoende"</code> in. De formule wordt: <code>=ALS(A2  &lt 5,5;"Onvoldoende")</code></li>
+            <li>Vul hierachter een <code>;</code> in. De formule wordt <code>=ALS(A2 &lt 5,5;"Onvoldoende";)</code></li>
+            <li>Na de <code>;</code> voeren we de tekst Voldoende in tussen quotes. De formule wordt:
+                <code>=ALS(A2  &lt 5,5;"Onvoldoende";"Voldoende")</code></li>
             <li>Druk op <code>ENTER</code></li>
         </ol>
         <section class="wistjedat">
             <h3>Wist je dat...</h3>
-            <p>ALS heel erg lijkt op een veelgebruikte term in programmeren? Namelijk het zogenoemde <code>if-statement</code>.</p>
+            <p>ALS heel erg lijkt op een veelgebruikte term in programmeren? Namelijk het zogenoemde
+                <code>if-statement</code>.</p>
             <code>if($loggedIn === true){</code>
-            <code>echo "Welkom.";</code> 
-            <code>}</code> 
+            <code>echo "Welkom.";</code>
+            <code>}</code>
             <code>else{</code>
-              <code>echo "Je bent niet ingelogd."</code>  
-            <code>}</code>    
+            <code>echo "Je bent niet ingelogd."</code>
+            <code>}</code>
         </section>
-        <p>We hebben nu een tool die voldoende laat zien als het cijfer hoger dan een 5,5 is en onvoldoende als het cijfer lager is, gaaf! Mocht je nou niet een student hebben die een onvoldoende eindcijfer hebt kan je deze veranderen in het tabblad "Cijfers Excel 101".</p>
-        <p>We wilden alleen een formule die onvoldoende, voldoende <strong>en</strong> goed ging onderscheiden. We moeten dus een categorie toevoegen. Dit doen we door een ALS in een ALS te doen. <em>Als</em> dat maar goed gaat... (badum-tss)</p>
+        <p>We hebben nu een tool die voldoende laat zien als het cijfer hoger dan een 5,5 is en onvoldoende als het
+            cijfer lager is, gaaf! Mocht je nou niet een student hebben die een onvoldoende eindcijfer heeft kan je deze
+            data veranderen in het tabblad "Cijfers Excel 101".</p>
+        <p>We wilden alleen een formule die onvoldoende, voldoende <strong>en</strong> goed ging onderscheiden. We
+            moeten dus een categorie toevoegen. Dit doen we door een ALS in een ALS te doen. <em>Als</em> dat maar goed
+            gaat... (badum-tss)</p>
         <ol class="list">
-            <li>Verwijder de quotjes en de text voldoende in de formule van D3. De formule wordt weer: <code>=ALS(A2<5,5;"Onvoldoende";)</code></li>
-            <li>We checken in de buitenste als eerst of het een onvoldoende is door te kijken of het getal kleiner is dan 5,5. Dan zijn we namelijk snel klaar. </li>
-            <li>Nu gaan we checken of het cijfer kleiner is dan een 8,1. Dus een cijfer tussen de 5,5-8 is een voldoende. Dit doen we weer met een ALS()</li>
-            <li>Vul op de plek waar <code>"Voldoende"</code> stond <code>=ALS()</code> in. De formule wordt: <code>=ALS(A2<5,5;"Onvoldoende";ALS())</code></li>
-            <li>In de binnenste ALS checken we opnieuw het cijfer in A2, maar nu of deze kleiner is dan een 8,1. De formule wordt nu:</li>
-            <li><code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1))</code></li>
-            <li>Als het cijfer kleiner is dan een 8,1 dan is het dus een voldoende. We voegen een <code>;</code> toe achter het criteria in de binnenste als en de tekst "Voldoende". De formule wordt: </li>
-            <li><code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1;"Voldoende"))</code></li>
-            <li>Als het cijfer niet een voldoende is.... is het een goed! Dit komt omdat de buitenste ALS al alle onvoldoende opvangt. Dit kunnen we ook in de formule zetten: </li>
-            <li><code>=ALS(A2<5,5;"Onvoldoende";ALS(A2<8,1;"Voldoende";"Goed"))</code></li>
-            <li>Druk op <code>Enter</code></li>
+            <li>Verwijder de quotjes en de text voldoende in de formule van D3. De formule wordt weer:
+                <code>=ALS(A2  &lt 5,5;"Onvoldoende";)</code></li>
+            <li>We checken in de buitenste ALS eerst of het een onvoldoende is door te kijken of het getal kleiner is
+                dan 5,5. Dan zijn we namelijk snel klaar. </li>
+            <li>Nu gaan we checken of het cijfer kleiner is dan een 8,1. Dus een cijfer tussen de 5,5-8 is een
+                voldoende. Dit doen we weer met een ALS()</li>
+            <li>Vul op de plek waar <code>"Voldoende"</code> stond <code>=ALS()</code> in. De formule wordt:
+                <code>=ALS(A2  &lt 5,5;"Onvoldoende";ALS())</code></li>
+            <li>In de binnenste ALS checken we opnieuw het cijfer in A2, maar nu of deze kleiner is dan een 8,1. De
+                formule wordt nu:</li>
+            <li><code>=ALS(A2  &lt 5,5;"Onvoldoende";ALS(A2  &lt 8,1))</code></li>
+            <li>Als het cijfer kleiner is dan een 8,1 dan is het dus een voldoende. We voegen een <code>;</code> toe
+                achter het criteria in de binnenste ALS  en de tekst "Voldoende". De formule wordt: </li>
+            <li><code>=ALS(A2  &lt 5,5;"Onvoldoende";ALS(A2  &lt 8,1;"Voldoende"))</code></li>
+            <li>Als het cijfer niet een voldoende is.... is het een goed! Dit komt omdat de buitenste ALS al alle
+                onvoldoende opvangt. Dit kunnen we ook in de formule zetten: </li>
+            <li><code>=ALS(A2  &lt 5,5;"Onvoldoende";ALS(A2  &lt 8,1;"Voldoende";"Goed"))</code></li>
+            <li>Druk op <code>Enter</code>.</li>
         </ol>
-        <p>En zo zijn we opeens aan het einde. Je hebt je eerste tool gemaakt in Excel! Gefeliciteerd! Dit is het begin van het beheersen van een tool die ontzettend handig kan zijn voor je werk. Ik hoop dan ook dat je net zoveel plezier hebt gehad bij het uitvoeren als ik bij het maken. </p>
+        <p>En zo zijn we opeens aan het einde. Je hebt je eerste tool gemaakt in Excel! Gefeliciteerd! Dit is het begin
+            van het beheersen van een tool die ontzettend handig kan zijn voor je werk. Ik hoop dan ook dat je net
+            zoveel plezier hebt gehad bij het uitvoeren als ik bij het maken. </p>
         <p>Om te kunnen zien wat Excel allemaal wel niet kan nodig ik je uit naar de volgende sectie te gaan. </p>
         <section class="opdracht">
-            <p>Opdracht: Wees trots op jezelf! Excel is <strong>niet</strong> makkelijk en toch heb je het voor elkaar gebokst iets gaafs te maken. Goed gedaan!</p>
+            <p>Opdracht: Wees trots op jezelf! Excel is <strong>niet</strong> makkelijk en toch heb je het voor elkaar
+                gebokst iets gaafs te maken. Goed gedaan!</p>
         </section>
         <a href="/pages/7.html" class="breadcrumb">Naar 7. Gave dingen in Excel </a>
 </body>
