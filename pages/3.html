@@ -16,61 +16,81 @@
         <a href="/" class="breadcrumb">Terug naar Home</a>
         <a href="/pages/2.html" class="breadcrumb">Terug naar 2. Een simpele lay-out maken</a>
         <h1>3. Functies</h1>
-        <p>Waar Excel echt van pas komt is het verwerken van gegevens. Nu we een lay-out hebben met wat data kunnen we hieraan beginnen. </p>
+        <p>Waar Excel echt van pas komt is het verwerken van gegevens. Nu we een lay-out hebben met wat data kunnen we
+            hieraan beginnen. </p>
         <p>Het verwerken en analyseren van data gebeurt vrijwel altijd met <em>functies</em>.
             Een functie is niet veel meer dan een formule die een input krijgt en een output genereerd bijvoorbeeld:</p>
-            <code>f(x) = 2x + 4</code>
-        <p>De functie <em>f</em> kan een input <em>x</em> verwerken. Dit doe de functie door 2 maal x te doen en er dan 4 bij op te tellen. Stel dat wij voor x een 3 invoeren:</p>
+        <code>f(x) = 2x + 4</code>
+        <p>De functie <em>f</em> kan een input <em>x</em> verwerken. Dit doe de functie door 2 maal x te doen en er dan
+            4 bij op te tellen. Stel dat wij voor x een 3 invoeren:</p>
         <code>x = 3; f(3) = 2 x 3 + 4 = 10</code>
         <p>Bij de input 3 is de output dus 10!</p>
         <p>Excel werkt op dezelfde manier, maar heeft zelf een aantal ingebouwde functies. </p>
         <section class="wistjedat">
-            <h3>Quiz</h3> 
-            <p>Hoeveel ingebouwde functies denk jij dan Excel heeft?</p>
-        </section>  
+            <h3>Quiz</h3>
+            <p>Hoeveel ingebouwde functies denk jij dat Excel heeft?</p>
+        </section>
 
-        <p>Excel heeft meer dan 450(!!) ingebouwde functies. Van het berekenen van gemiddelde en mediaan tot het opzoeken van gegevens in een ander tabblad en alles daartussen.</p>
-        
+        <p>Excel heeft meer dan 450(!!) ingebouwde functies. Van het berekenen van het gemiddelde en de mediaan tot het
+            opzoeken van gegevens in een ander tabblad en alles daartussen.</p>
+
         <h2>Sommen</h2>
         <p>
-         Een van de meest gebruikte ingebouwde functies is <code>sommen</code> (het optellen van getallen).
+            Een van de meest gebruikte ingebouwde functies is <code>sommen</code> (het optellen van getallen).
         </p>
         <ol>
             <li>Klik in jouw sheet op B26/C26 (als het goed is, is dit 1 cel). </li>
-            <li>Klik vervolgens op de tekstbalk. Deze zie je als het goed is updaten als je bijvoorbeeld een tekst in de cel typt.</li>
-            <li>Maak de tekstbalk leeg als deze nog niet was en vul hier een <code>=</code> in. Hiermee start je het gebruik van een functie.</li>
+            <li>Klik vervolgens op de tekstbalk. Deze zie je als het goed is updaten als je bijvoorbeeld een tekst in de
+                cel typt.</li>
+            <li>Maak de tekstbalk leeg als deze nog niet was en vul hier een <code>=</code> in. Hiermee start je het
+                gebruik van een functie.</li>
             <li>Vul hier volgens <code>SOM()</code> in. Het totaal in de tekstbalk is dus <code>=SOM()</code>.</li>
             <li>Vul tussen de <code>()</code>haken het bereik B5:B24 in. </li>
         </ol>
-        <p>Cool! Als alles goed is gegaan heb je nu een simpel kasboekje qua uitgaven gemaakt. Verander eens wat data en kijk wat er gebeurd.</p>
+        <p>Cool! Als alles goed is gegaan heb je nu een simpel kasboekje qua uitgaven gemaakt. Verander eens wat data en
+            kijk wat er gebeurd.</p>
         <section class="opdracht">
             Opdracht: Maak zelf de berekening voor F12/G12 (dit is één cel).
         </section>
 
         <h2>Verwijzing naar andere cellen & Een tabblad interactief maken</h2>
-        <p>We gaan een stapje verder! Nu we weten wat onze uitgaven en inkomsten zijn is het makkelijk daar uit te herleiden wat we hebben gespaard:</p>
+        <p>We gaan een stapje verder! Nu we weten wat onze uitgaven en inkomsten zijn is het makkelijk daar uit te
+            herleiden wat we hebben gespaard:</p>
         <ol class="list">
-            <li>Klik op E18</li>
-            <li>Vul in de tekstbalk <code>=F12 - B26</code>. Hier zeggen we dus dat we de waarde van F12 af willen trekken van B26.</li>
+            <li>Klik op E18 (de cel onder <em>Wat spaar ik nu?</em></li>
+            <li>Vul in de tekstbalk <code>=F12 - B26</code>. Hier zeggen we dus dat we de waarde de inkomsten (F12) af
+                willen trekken van de uitgaven (B26).</li>
         </ol>
         <p>Is alles goed gegaan? Dan heb je nu een spaarbedrag!</p>
         <section class="opdracht">
-            Opdracht: Vul een bedrag bij F18 in. Maak vervolgens een formule waarmee je uitrekent hoeveel je nog uit te geven hebt. (vergeet de juiste datatypes niet te gebruiken!)
+            Opdracht: Vul een bedrag bij F18 in. Maak vervolgens een formule waarmee je uitrekent hoeveel je nog uit te
+            geven hebt( Vergeet niet de juiste datatypes te gebruiken!).
         </section>
 
         <h2>Voorwaardelijke opmaak</h2>
-        <p>Wil je direct een indicatie als er iets goed of fout gaat? Geen probleem! Hier is voorwaardelijke opmaak voor. Voorwaardelijke opmaak maakt een bepaalde cel of een bepaald bereik op aan de hand voor een voorwaarde... De naam is goed uitgekozen!</p>
+        <p>Wil je direct een indicatie als er iets goed of fout gaat? Geen probleem! Hier is voorwaardelijke opmaak
+            voor. Voorwaardelijke opmaak maakt een bepaalde cel of een bepaald bereik op aan de hand voor een
+            voorwaarde... De naam is goed uitgekozen!</p>
         <ol>
             <li>Klik op cel G18.</li>
-        <li>Zoek naar de knop <code>Voorwaardelijke opmaak</code>. Klik hierop en selecteer <code>Markeringsregels voor cellen</code>.</li>
-        <li>Selecteer <code>Kleiner dan</code>.</li>
-        <li>Vul in het linkerveld 0 in en selecteer in het rechter veld <code>Lichtrode opvulling met donkerrode tekst</code>.</li>
-        <li>Klik op <code>OK</code>.</li>
-    <p>Er gebeurt niks..... Dat klopt ook; Het bedrag is namelijk niet onder de 0! Speel wat met data zodat je meer hebt uitgegeven dan je eigenlijk wilde. Je zult zien dat het werkt.</p>
-    </ol>
-    <section class="opdracht">
-        Opdracht: Selecteer B5:B24. Maak de voorwaardelijke opmaak zo dat wanneer er meer dan €500 wordt uitgegeven de cel rood wordt. Selecteer E18 en maak het zo dat wanneer je <strong>Wat spaar ik nu?</strong> boven de waarde van F18 komt deze opmaak groen wordt. Let op: dit moet ook werken als je het bedrag van F18 veranderd. Even puzzelen met <code>=</code> dus! 
-    </section>
+            <li>Zoek naar de knop <code>Voorwaardelijke opmaak</code>. Klik hierop en selecteer
+                <code>Markeringsregels voor cellen</code>.</li>
+            <li>Selecteer <code>Kleiner dan</code>.</li>
+            <li>Vul in het linkerveld 0 in en selecteer in het rechter veld
+                <code>Lichtrode opvulling met donkerrode tekst</code>.</li>
+            <li>Klik op <code>OK</code>.</li>
+            <p>Er gebeurt niks..... Dat klopt ook; Het bedrag is namelijk niet onder de 0! Speel wat met data zodat je
+                meer hebt uitgegeven dan je eigenlijk wilde. Je zult zien dat het werkt.</p>
+        </ol>
+        <section class="opdracht">
+            Opdracht: Selecteer B5:B24. Maak de voorwaardelijke opmaak zo dat wanneer er meer dan €500 wordt uitgegeven
+            de betreffende cel rood wordt.
+        </section>
+        <section class="opdracht">
+            Opdracht: Selecteer E18 en maak het zo dat wanneer je <strong>Wat spaar ik nu?</strong> boven de waarde van F18 komt
+            deze opmaak groen wordt. Let op: dit moet ook werken als je het bedrag van F18 veranderd. Even puzzelen met
+            <code>=</code> dus!
+        </section>
         <a href="/pages/4.html" class="breadcrumb">Naar 4. Gegevens Filteren en Sorteren </a>
 </body>
 
