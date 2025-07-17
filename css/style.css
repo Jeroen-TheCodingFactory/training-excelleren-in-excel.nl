@@ -207,3 +207,20 @@ iframe {
     }
 
 }
+
+@media print{
+    a, .mainHeader, video, iframe{
+        display:none !important;
+    }
+    .mainHeader{
+        display:none;
+    }
+
+      .body--page {
+        font-size:100%;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas:
+            "main";
+    }
+}
