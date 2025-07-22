@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8. Evaluatie</title>
+    <title>8. Draaitabellen</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -15,14 +15,82 @@
     <main class="page">
         <a href="/" class="breadcrumb">Terug naar Home</a>
         <a href="/pages/7.html" class="breadcrumb">Terug naar 7. Gave dingen in Excel! </a>
-        <h1>8. Evaluatie</h1>
-        <p>Zou je onderstaande evaluatie in willen vullen? Dit helpt mij enorm om deze training / komende trainingen te
-            verbeteren. Alvast enorm bedankt!</p>
-        <iframe width="640px" height="480px"
-            src="https://forms.office.com/Pages/ResponsePage.aspx?id=T3y5lL5XeE23mNdlB7ZQ5Y03c--F8olLiReN8KGMHE1UQVZUSlc3WDdTWENYVDY2VlRSOUFWQkpROS4u&embed=true"
-            frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh"
-            allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
-        <a href="/" class="breadcrumb">Terug naar Home </a>
+        <h1>8. Draaitabellen</h1>
+        <p>Draaitabellen zijn wellicht het moeilijkste te begrijpen wanneer je bezig bent met data. Ook ik vond
+            draaitabellen lastig en kreeg ze nooit echt "aan de praat". In deze sectie gaan we dan ook naast
+            draaitabellen ook leren waarom ze vaak net niet doen wat jij wilt, en hoe we dit kunnen oplossen!</p>
+        <p>Download <a href="/data/opdracht-8-voorbeeld.xlsx" class="breadcrumb">hier</a> een Excel
+            die je gaat gebruiken voor deze sectie.</p>
+        <section class="wistjedat">
+            <h3>Wist je dat...</h3>
+            <p>Draaitabellen in het Engels "Pivot Tables" heten?</p>
+        </section>
+        <section class="opdracht">
+            <p>Opdracht: Download het bestand en kopieër het tabblad naar jouw eigen Excel.</p>
+        </section>
+        <section class="opdracht">
+            Opdracht: De sheet heeft een verborgen kolom, maak deze zichtbaar. Maak alle kolommen 20 breed.
+        </section>
+
+        <h2>Een draaitabel maken</h2>
+        <p>Nu we alle kolommen zichtbaar hebben gaan we een draaitabel maken:</p>
+        <ol class="list">
+            <li>Selecteer A1:E63.</li>
+            <li>Zoek in de zoekbalk bovenaan naar "Draaitabel" en klik hierop.</li>
+            <li>Er opent een nieuw venster. In tabel/bereik staat (als het goed is) <code>Blad1!$A$1:$E$63</code>.</li>
+            <li>Klik op <code>OK</code>. Een nieuw tabblad wordt gemaakt met een lege draaitabel.</li>
+        </ol>
+
+        <h2>Kolommen met de juiste volgorde</h2>
+        <p>Het makkelijkste deel hebben we gehad, we hebben een draaitabel gemaakt! Deze is echter alleen nog leeg.... Niet heel handig nog!</p>
+        <ol class="list">
+            <li>Je ziet in het venster aan de zijkant genaamd <em>Draaitabelvelden</em> een aantal opties. De bovenste optie is zoeken waarmee we kolommen uit onze oorspronkelijke sheet kunnen zoeken. Voor nu niet nodig, we hebben niet zoveel kolommen.</li>
+            <li>Laten we zeggen dat we alle voornamen per afdeling willen zien. Klik op "Voornaam" en klik op "Afdeling".</li>
+            <li>Als het goed is zie je nu elke voornaam met daaronder de betreffende afdeling. Dit is nogsteeds niet heel handig, we zouden namelijk per afdeling eigenlijk alle voornamen willen zien en niet alles onder elkaar. </li>
+            <li>Dit komt omdat draaitabellen standaard beide kolommen in de sectie "Rijen" zetten. De draaitabel doet dus eigenlijk precies wat het moet doen, het laat een voornaam zien, met daaronder de afdeling. Probeer in de sectie "Rijen" de kolom "Afdeling" boven de kolom "Rijen" te slepen.</li>
+            <li>En voila! Het werkt. We zien nu per afdeling de voornamen.</li>
+        </ol>
+        <h2>Waarden</h2>
+        <p>Laten we het iets ingewikkelder maken door het gemiddelde salaris per afdeling tevoorschijn te toveren:</p>
+        <ol class="list">
+            <li>Kies "Bruto Maandsalaris" in de selectie en deselecteer "Voornaam".</li>
+            <li>We krijgen nu alle salarissen per afdeling. Versleep "Bruto Maandsalaris" naar "Waarden".</li>
+            <li>Standaard geeft Excel het aantal bruto maandsalarissen, maar we willen het gemiddelde weten. Klik op het pijltje naar beneden achter "Aantal van Bruto Maandsalaris" en klik op <em>Waardeveldinstellingen</em>.</li>
+            <li>Hier kunnen we verschillende opties selecteren, zoals het minimum salaris (min), maximum salaris (max) en het gemiddelde. Selecteer <em>Gemiddelde</em> en klik op <code>OK</code>.</li>
+            <li>En...... kapot. De draaitabel werkt niet en geeft de foutmelding <code>#DELING.DOOR.0!</code>.</li>
+            <li>En hier gaat het dus ook vaak mis. <strong>Jij doet niets fout, maar Excel kan niet goed overweg met de data en geeft een foutmelding</strong>. </li>
+            <li>In dit geval betekent de foutmelding dat Excel probeert te delen door 0 omdat het de data niet begrijpt. Ga terug naar het tabblad met de data.</li>
+            <li>Meestal komt een rekenfout omdat Excel de data niet als getal ziet. Selecteer E2:E63, je ziet dat het datatype "Valuta" is, dit klopt dus. </li>
+            <li>Maar waar zit dan de fout? Excel gebruikt <code>,</code> voor decimale getallen , niet <code>.</code> . We moeten deze dus vervangen.</li>
+            <li>Selecteer kolom E en toets <code>CTRL + F</code>. Klik op het tabblad <code>Vervangen</code>.</li>
+            <li>In dit geval weten we dat alle <code>.</code> in deze kolom (E) makkelijk vervangen kunnen worden. Toets in <code>Zoeken naar:</code> <code>.</code> in. In <code>Vervangen door:</code> mag je een <code>,</code> intoetsen.</li>
+            <li>Klik vervolgens op <code>. Alles vervangen</code>.</li>
+            <li>Als alles goed is gegaan zie je nu de waardes in kolom E een euroteken krijgen en nu dus echt als getallen worden gezien. Omdat we ermee gaan rekenen kan je beter kolom E omzetten naar "Financieel". Selecteer kolom E2:E63 en selecteer <code>Financieel</code> als datatype.</li>
+            <li>Ga naar het tabblad met de draaitabbel en doe een <code>rechtsklik</code>. Klik vervolgens op <code>Vernieuwen</code>.</li>
+            <li>Als alles goed is gegaan zie we nu een werkende draaitabel met het gemiddelde salaris per afdeling!</li>
+        </ol>
+          <section class="opdracht">
+           <p> Opdracht: Voeg "Team" toe aan de <code>Rijen</code>. Voeg "FTE" toe aan de kolommen. Je hebt nu een overzicht van het gemiddelde salaris  per afdeling, per team per FTE. Wauw!</p>
+        </section>
+        <section class="opdracht">
+            <p>Opdracht: De oude naam B&S staat nog in de datasheet, niet heel handig. Vervang deze met S&B in de sheet met de data. Vernieuw vervolgens de tabel. </p>
+        </section>
+        <section class="wistjedat">
+            <strong>Let op: Je kan héél makkelijk perongeluk alle data vervangen (bijv. alle punten of bepaalde worden) in de Excel-sheet. Mocht je ooit zo een fout maken, <code>CTRL + Z</code>.</strong>
+        </section>
+        <section class="opdracht">
+            <p>Maak de draaitabel zo dat je de som van alle FTE + de som van alle salarissen krijgt per team. Probeer de kolommen en rijen ook eens om te draaien zodat je ziet welk effect dit heeft. Filter zo dat je maar 1 team per keer krijgt.</p>
+        </section>
+        <h2>Data analyseren</h2>
+        <p>Soms wil je weten (zeker in een grote datasheet) waar een bepaalde waarde op gebaseerd is. </p>
+        <ol class="list">
+            <li>Klik op de som van de Bruto maandsalarissen. </li>
+            <li>Klik bovenin op "Draaitabel analyseren" en vervolgens op "Details weergeven."</li>
+            <li>Als dit goed is gegaan zit je nu in een nieuw tabblad met precies de gegevens die je nodig had! Deze kan je vervolgens weer filteren als je wilt.</li>
+        </ol>
+        <p>En dat is het voor draaitabellen! Je hebt enorme stappen gemaakt, van niets snappen over draaitabellen naar een eigen draaitabel maken met details + je kan je fouten oplossen als die zich voordoen. Wees trots op jezelf!</p>
+        <a href="/pages/8.html" class="breadcrumb">Naar 9. Evaluatie </a>
+
 </body>
 
-</html>
+</html> 
