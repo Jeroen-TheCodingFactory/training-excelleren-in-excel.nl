@@ -102,8 +102,13 @@ a {
 }
 
 .card:nth-of-type(9) {
-    animation-delay: 0.8s;
+    animation-delay: 0.9s;
 }
+
+.card:nth-of-type(10) {
+    animation-delay: 1.0s;
+}
+
 
 .card__header {
     height: 20%;
