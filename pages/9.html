@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>8. Draaitabellen</title>
+    <title>9. Draaigrafieken</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -16,8 +16,126 @@
         <a href="/" class="breadcrumb">Terug naar Home</a>
         <a href="/pages/8.html" class="breadcrumb">Terug naar 8. Draaigrafieken </a>
         <h1>9. Draaigrafieken</h1>
+        <p>Soms is een draaitabel alleen niet genoeg om bepaalde data in te zien, bijvoorbeeld omdat er erg veel data
+            aanwezig is. Een visualisatie kan je hierbij helpen. In deze sectie gaan we werken aan een sheet met veel
+            data (ongeveer 5000 rijen) en maken we een interactieve grafiek die ons gaat helpen deze data inzichtelijk
+            te maken.</p>
+        <section class="opdracht">
+            <p>Download <a class="breadcrumb" href="/data/opdracht-9-voorbeeld.xlsx">hier</a> de Excelsheet die we gaan
+                gebruiken voor de
+                opdracht en kopieer deze naar je eigen Excel-bestand. Maak alle kolommen met data 30 breed.</p>
+        </section>
+        <h2>Onze eerste draaigrafiek</h2>
+        <p>Nu we de data kunnen lezen maken gaan we een draaigrafiek maken:</p>
+        <ol class="list">
+            <li>Zoek naar <code>Draaigrafiek</code> in de zoekbalk en klik hierop.
+            <li>Tabel/bereik is te groot om te selecteren (de Excel heeft 5000 rijen). Voer hier de volgende formule in:
+                <code>'5000_werkprocessen'!$A:$F</code>. Hiermee selecteren we de kolommen A tot en met F. G en H zijn
+                niet nodig.
+            </li>
+            <li>Klik vervolgens op <code>OK</code>. Hiermee opent een nieuw tabblad met een lege draaitabel én een lege
+                draaigrafiek.</li>
+            <li>Laten we beginnen met de data te bekijken. Elke kwalificatie heeft werkprocessen die goedgekeurd worden
+                bij een bepaald bedrijfm in een bepaalde regio en plaats. We zouden hier de vraag kunnen stellen:
+                "Hoeveel kwalificaties zijn er goedgekeurd (via werkprocessen) in een bepaalde regio?"</li>
+            <li>Om dit te doen selecteren in het deelvenster van de <code>Draaigrafiekveleden</code> "Kwalificatie" en
+                "Regio".</li>
+            <li>We willen tellen hoeveel kwalificaties er zijn per regio, versleep "Kwalificatie" naar "Waarden".</li>
+            <li>Standaard gaat de grafiek dan tellen hoeveel kwalificaties er in een regio voorkomen! </li>
+            <li>Om de grafiek nog wat inzichtelijker te maken selecteren we ook "Plaats". De grafiek update automatisch.
+                We hebben nu inzicht welke kwalificaties erkend zijn in een bepaalde regio met bijbehorende plaats.</li>
+            <li>Zo zien we dat Utrecht in totaal boven de rest uitsteekt en Den Haag het laatste aantal kwalificaties
+                "aanbied" bij haar bedrijven.</li>
+        </ol>
+        <h2>Filteren wanneer een grafiek te groot wordt</h2>
+        <p>Soms willen we meer gedetailleerde inzichten aanbieden zonder overzicht te verliezen:</p>
+        <ol class="list">
+            <li>Kies ook "Werkproces" in het deelvenster.</li>
+            <li>Je ziet dat de grafiek enorm onoverzichtelijk wordt, omdat er veel bedrijven zijn die verschillende
+                werkprocessen van verschillende kwalificaties aanbieden.</li>
+            <li>Sleep "Kwalificatie" (die al geselecteerd is) in de <code>Legenda (reeks)</code>. Hiermee kunnen we de
+                verschillende kwalificaties onderscheiden.</li>
+            <li>We kunnen op verschillende manieren filteren, maar de meest gebruiksvriendelijke is het toevoegen van
+                een <code>Slicer</code>. Klik ergens in de grafiek en ga naar "Draaigrafiek analyseren".</li>
+            <li>Klik hier op <code>Slicer invoegen</code>. Selecteer hier "Kwalificatie" en "Regio" en klik op
+                <code>OK</code>.
+            </li>
+            <li>Er verschijnen twee kleine venstertjes. Hier kan je een regio selecteren en een kwalificatie. Probeer
+                dit eens uit! Je ziet de grafiek veranderen.</li>
+            <li>Je kan meerdere tegelijk selecteren door de "v-" optie bovenaan de slicer, je kan de filters weer
+                uiteztten door de knop ernaast te drukken.</li>
+        </ol>
+        <section class="opdracht">
+            <p>Opdracht: Maak de grafiek zo dat je inzichtelijk maakt welke hoeveel werkprocessen zijn goedgekeurd in de
+                regio's "Amsterdam", "Regio Noord", "Zuid" voor de kwalificaties "Immersief Ontwerper" en "Immersief
+                technicus". Doe een rechtsklik als je klaar bent en sla het bestand op als afbeelding op je bureablad.
+                Je hebt nu een visualisatie gemaakt en als afbeelding opgeslagen!</p>
+        </section>
+        <h2>Details + stijl</h2>
+        <p>In de grafiek zien we dat B1-K1-W1, B1-K1-W2 en B1-K2-W1 het meeste in regio Amsterdam (en plaats Amsterdam)
+            worden toegekend (voor Immersief Ontwerper). Om te weten welke bedrijven dit zijn kunnen we in de draaitabel
+            ernaast klikken:
+        <ol class="list">
+            <li>Klik op B6, het aantal Immersief Ontwerper goedgekeurde werkprocessen. </li>
+            <li>Ga naar "Draaitabel Analyseren" en klik op "Details Weergeven".</li>
+            <li>Je krijgt nu een nieuw tabblad met alle bedrijven die voor dit werkproces goedgekeurd zijn! Handig!</li>
+        </ol>
+        <p>Ook kunnen we de stijl van de grafiek aanpassen:</p>
+        <ol class="list">
+            <li>Klik op de draaigrafiek en ga naar "Ontwerpen". </li>
+            <li>Kies hier een stijl uit die jij duidelijk vindt voor de grafiek.</li>
+            <li>Je kan vrijwel alles in een grafiek aanpassen, aantallen toevoegen in de grafiek zelf, elementen
+                toevoegen en meer. Speel daar eens mee!</li>
+        </ol>
+        <h2>Andere soort grafieken</h2>
+        <p>In Excel kan je vrijwel elke grafiek maken die je wilt. De bar-chart hebben we al gebruikt, deze geeft een
+            vergelijking tussen waarden (bij ons toegekende werkprocessen van een kwalificatie in een regio en plaats).
+            Om een verandering in tijd weer te geven gebruiken we een line-chart.</p>
+        <section class="opdracht">
+            <p>Opdracht: Maak een nieuwe draaigrafiek met alle data van de sheet. Probeer dit zelf! Weet je niet hoe dit
+                moet? Scroll dan even naar bovenaan deze pagina.</p>
+        </section>
+        <p>We gaan proberen een inzicht te verkrijgen in de hoeveelheid werkprocessen die goedgekeurd zijn voor de
+            kwalificatie "Mediamaker":</p>
+        <ol class="list">
+            <li>Selecteer "Werkproces goedgekeurd op" en "Werkproces".</li>
+            <li>Sleep "Werkproces" naar "Waarden" zodat we weer het aantal Werkprocessen kunnen zien.</li>
+            <li>Je ziet nu dat Excel laat zien dat er rond de 1230 werkprocessen in 2022 zijn goedgekeurd en meer
+                dan 1240 in 2023. </li>
+            <li>Super! Maar we willen graag weten of er een trend zit in het aantal goedgekeurde werkprocessen, en
+                alleen voor de kwalificatie "Mediamaker". Klik op de grafiek en selecteer
+                <code>Slicer Invoegen</code>. Kies "Kwalificatie" en klik op <code>OK</code>.
+            </li>
+            <li>Selecteer in de slicer de kwalificatie "Mediamaker".</li>
+            <li>We zien nu het aantal goedgekeurde werkprocessen van de kwalificatie Mediamaker per jaar.</li>
+            <li>Rechtsklik op de draaigrafiek en selecteer <code>Ander grafiektype</code>.</li>
+            <li>Hier zie je verschillende soorten types. Wij gaan voor "Lijn" en vervolgens de vierde van links
+                "Lijn met markeringen". Klik op <code>OK</code>.</li>
+            <li>We zien nu een duidelijk trend naar beneden na 2023 voor de goedkeuring van werkprocessen van
+                Mediamaker. Als we "Werkprocessen" slepen in "Legenda (reeks)" worden alle werkprocessen
+                uitgesplist. Dit geeft ons een nog beter beeld welke werkprocessen het meest afnamen.</li>
+            <li>We zien nu dat B1-K2-W3 een piek had in 2023, terwijl andere werkprocessen dit niet hadden. Dit
+                geeft ons inzicht voor de toekomstige ontwikkeling van het dossier!</li>
+        </ol>
+        <p>We gaan onze grafiek nog iets uitbreiden, we willen namelijk graag per werkproces kunnen vergelijken voor de
+            Allround Mediamaker versus de Mediamaker:</p>
+        <ol class="list">
+            <li>Voeg in de slicer ook de Allround Mediamaker toe.</li>
+            <li>We zien nu alle werkprocessen maar zien niet duidelijk welk proces bij welke kwalificatie hoort. Sleep
+                kwalificatie naar "Legenda (reeks)" zodat deze gegroupeerd worden.</li>
+            <li>We zien nu welk werkproces bij welke kwalificatie hoort, maar willen graag op een enkel werkproces
+                vergelijken. Om dit te doen voegen we opnieuw een slicer toe voor "Werkproces".</li>
+            <li>Kies in de slicer "B1-K1-W1". We zien nu bijvoorbeeld dat er een duidelijke dip was in de toekenning van
+                dit werkproces bij de Allaround Mediamaker maar niet bij de Mediamaker. We halen hiermee inzichten uit
+                data! </li>
+        </ol>
+        <section class="opdracht">
+            <p>Eindopdracht: Vergelijk het werkproces B1-K1-W2 van de Immersief Ontwerper en Immersief Technicus in het
+                jaar 2022 (hiervoor moet je een slicer van Jaren toevoegen) per maand (hier moet je het e.e.a. in As
+                categorieën voor veranderen). Sla deze grafiek op en laat deze zien aan de docent! </p>
+        </section>
         <a href="/pages/10.html" class="breadcrumb">Naar 10. Evaluatie </a>
 
 </body>
 
-</html> 
+</html>
